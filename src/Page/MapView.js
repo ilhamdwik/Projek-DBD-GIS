@@ -5,16 +5,16 @@ import L from "leaflet";
 import axios from "axios";
 import "./Map-Desain.css";
 
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-  Collapse,
-  Nav,
-  NavLink,
-  NavItem,
-  CardTitle
-} from "reactstrap";
+// import {
+//   Navbar,
+//   NavbarBrand,
+//   NavbarToggler,
+//   Collapse,
+//   Nav,
+//   NavLink,
+//   NavItem,
+//   CardTitle
+// } from "reactstrap";
 
 function MapView() {
   const center = [-6.9039986, 111.3391923];
@@ -30,7 +30,7 @@ function MapView() {
   }, []);
 
   function getDataPeta() {
-    axios.get("http://192.168.1.11:3001/api/v1/list/dbd").then((response) => {
+    axios.get("http://10.252.133.214:3001/api/v1/list/dbd").then((response) => {
       console.log(response.data);
       setDataPeta(response.data);
     });
@@ -39,7 +39,7 @@ function MapView() {
   // console.log(dataPeta)
   return (
     <div className="map-body">
-      <Navbar color="light" expand="md" light>
+      {/* <Navbar color="light" expand="md" light>
         <NavbarBrand >Pesebaran Penyakit DBD</NavbarBrand>
         <NavbarToggler onClick={function noRefCheck() {}} />
         <Collapse navbar>
@@ -55,7 +55,7 @@ function MapView() {
             </NavItem>
           </Nav>
         </Collapse>
-      </Navbar>
+      </Navbar> */}
 
       {/* <CardTitle tag="h5"
         style={{
